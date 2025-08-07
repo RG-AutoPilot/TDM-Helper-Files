@@ -1,0 +1,32 @@
+Image Backups Available and Locations:
+
+- DMDatabase (SQL Server): C:\Shared\TDM\DMDatabase.bak
+- StackOverflow (SQL Server): C:\Shared\StackOverflow2010_subset.bak
+- PASSDataSummit (SQL Server): C:\Shared\TDM\PASSDataSummit.bak
+- Pagila (PostgreSQL): C:\Shared\pagila-pg\pagila-dump-pass.bak
+- Sakila (MySQL): C:\Shared\sakila-db\sakila-dump.bak
+
+Database Connection Strings for Preview (With User/Pass) - TDM Internal Server
+
+- DMDatabase ---> Server=rg-tdm01;Database=DMDatabase;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+- PASSDataSummit ---> Server=rg-tdm01;Database=PASSDataSummit;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+- StackOverflow ---> Server=rg-tdm01;Database=StackOverflow;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+- NewWorldDB ---> Server=rg-tdm01;Database=NewWorldDB;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+
+
+Database Connection Strings for Preview (With User/Pass) - WIN2016
+
+SQL Server
+- AdventureWorks ---> Server=WIN2016;Database=AdventureWorks;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+- DMDatabase ---> Server=WIN2016;Database=DMDatabase;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+- PASSDataSummit ---> Server=WIN2016;Database=PASSDataSummit;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+- StackOverflow ---> Server=WIN2016;Database=StackOverflow;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+- NewWorldDB ---> Server=WIN2016;Database=NewWorldDB;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+- NewWorldDB_Treated ---> Server=WIN2016;Database=NewWorldDB_Treated;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+- Autopilot ---> Server=WIN2016;Database=AutopilotProd_FullRestore;TrustServerCertificate=yes;User Id=Redgate;Password=Redg@te1
+
+Postgres
+- Host=Localhost;Port=5432;Database=pagila_treated;Username=postgres;Password=Redg@te1;
+
+MySQL
+- Server=Localhost;Database=sakila_treated;Uid=root;Pwd=Redg@te1;
