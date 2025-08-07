@@ -21,6 +21,7 @@ $OUTPUT = "Human" # Human|Json
 # Perform a dry-run with no subsetting applied by turning to true
 $DRY_RUN="false"
 $LOG_LEVEL = "Verbose"
+$FORCE = "true" # Force subsetting to run even if the source and target database have schema differences
 
 Write-Host "Running subset for database engine: $DB_ENGINE"
 
@@ -33,4 +34,5 @@ rgsubset run `
   --dry-run $DRY_RUN `
   --log-level $LOG_LEVEL `
   --output-file $OUTPUT_FILE `
-  --output $OUTPUT
+  --output $OUTPUT `
+  --force $FORCE
