@@ -7,11 +7,13 @@
 #   --masking-file: Path to the JSON file where masking rules will be generated.
 
 # Example values
-$CLASSIFICATION_FILE = "classification.json"
-$MASKING_FILE = "masking.json"
+$CLASSIFICATION_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\classification.json"
+$MASKING_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\masking.json"
+$OUTPUT = "Human" # Human|Json
 
 Write-Host "Running mapping from classification file to masking file"
 
 rganonymize map `
   --classification-file $CLASSIFICATION_FILE `
-  --masking-file $MASKING_FILE
+  --masking-file $MASKING_FILE `
+  --output $OUTPUT

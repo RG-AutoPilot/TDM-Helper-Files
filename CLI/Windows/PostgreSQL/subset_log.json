@@ -1,0 +1,79 @@
+{
+  "jsonSchemaVersion": 1,
+  "sourceDatabaseSizeInBytes": 1974272,
+  "targetDatabaseSizeInBytes": 303104,
+  "tables": [
+    {
+      "schema": "public",
+      "name": "actor",
+      "sourceRows": 187,
+      "targetRows": 60
+    },
+    {
+      "schema": "public",
+      "name": "address",
+      "sourceRows": 564,
+      "targetRows": 171
+    },
+    {
+      "schema": "public",
+      "name": "city",
+      "sourceRows": 561,
+      "targetRows": 169
+    },
+    {
+      "schema": "public",
+      "name": "country",
+      "sourceRows": 106,
+      "targetRows": 64
+    },
+    {
+      "schema": "public",
+      "name": "customer",
+      "sourceRows": 560,
+      "targetRows": 167
+    },
+    {
+      "schema": "public",
+      "name": "film",
+      "sourceRows": 834,
+      "targetRows": 242
+    },
+    {
+      "schema": "public",
+      "name": "film_actor",
+      "sourceRows": 502,
+      "targetRows": 50
+    },
+    {
+      "schema": "public",
+      "name": "film_category",
+      "sourceRows": 86,
+      "targetRows": 30
+    },
+    {
+      "schema": "public",
+      "name": "inventory",
+      "sourceRows": 1338,
+      "targetRows": 383
+    },
+    {
+      "schema": "public",
+      "name": "rental",
+      "sourceRows": 1533,
+      "targetRows": 120
+    },
+    {
+      "schema": "public",
+      "name": "staff",
+      "sourceRows": 2,
+      "targetRows": 2
+    },
+    {
+      "schema": "public",
+      "name": "store",
+      "sourceRows": 2,
+      "targetRows": 2
+    }
+  ]
+}

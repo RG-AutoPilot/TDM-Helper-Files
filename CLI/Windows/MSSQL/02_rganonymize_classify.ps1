@@ -11,8 +11,9 @@
 # Example values
 $DB_ENGINE = "SqlServer"
 $CONNECTION_STRING = "Server=Localhost;Database=NewWorldDB_Treated;Trusted_Connection=true;Trust Server Certificate=true;"
-$CLASSIFICATION_FILE = "classification.json"
+$CLASSIFICATION_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\classification.json"
 $LOG_LEVEL = "Verbose"
+$OUTPUT = "Human" # Human|Json
 
 Write-Host "Running classification for database engine: $DB_ENGINE"
 
@@ -21,4 +22,5 @@ rganonymize classify `
   --connection-string "$CONNECTION_STRING" `
   --classification-file $CLASSIFICATION_FILE `
   --output-all-columns `
-  --log-level $LOG_LEVEL
+  --log-level $LOG_LEVEL `
+  --output $OUTPUT

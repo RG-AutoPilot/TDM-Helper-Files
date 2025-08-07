@@ -1,0 +1,701 @@
+{
+  "jsonSchemaVersion": 1,
+  "tables": [
+    {
+      "schema": "HR",
+      "name": "CONTACTS",
+      "columns": [
+        {
+          "name": "CONTACT_ID"
+        },
+        {
+          "name": "FIRST_NAME",
+          "dataset": "GivenNames",
+          "deterministic": true,
+          "maxLength": 20
+        },
+        {
+          "name": "LAST_NAME",
+          "dataset": "FamilyNames",
+          "deterministic": true,
+          "maxLength": 25
+        },
+        {
+          "name": "ADDRESS1",
+          "dataset": "StreetAddresses",
+          "deterministic": true,
+          "maxLength": 30
+        },
+        {
+          "name": "ADDRESS2",
+          "dataset": "StreetAddresses",
+          "deterministic": true,
+          "maxLength": 30
+        },
+        {
+          "name": "ADDRESS3",
+          "dataset": "StreetAddresses",
+          "deterministic": true,
+          "maxLength": 30
+        },
+        {
+          "name": "ZIPCODE",
+          "dataset": "ZipCodes",
+          "maxLength": 10
+        },
+        {
+          "name": "EMAIL",
+          "dataset": "EmailAddresses",
+          "maxLength": 24
+        },
+        {
+          "name": "PHONE_NUMBER",
+          "dataset": "PhoneNumbers",
+          "maxLength": 20
+        },
+        {
+          "name": "TWITTER_ID",
+          "maxLength": 20
+        },
+        {
+          "name": "LINKEDIN_ID",
+          "maxLength": 20
+        },
+        {
+          "name": "X_ID",
+          "maxLength": 20
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "CONTACTS_NOTES",
+      "columns": [
+        {
+          "name": "CONTACT_ID"
+        },
+        {
+          "name": "FIRST_NAME",
+          "dataset": "GivenNames",
+          "deterministic": true,
+          "maxLength": 20
+        },
+        {
+          "name": "LAST_NAME",
+          "dataset": "FamilyNames",
+          "deterministic": true,
+          "maxLength": 25
+        },
+        {
+          "name": "FIDELITY_NUM",
+          "maxLength": 20
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "COUNTRIES",
+      "columns": [
+        {
+          "name": "COUNTRY_ID",
+          "maxLength": 2
+        },
+        {
+          "name": "COUNTRY_NAME",
+          "dataset": "Countries",
+          "deterministic": true,
+          "maxLength": 40
+        },
+        {
+          "name": "REGION_ID"
+        },
+        {
+          "name": "COUNTRY_LANGUAGE",
+          "dataset": "Countries",
+          "deterministic": true,
+          "maxLength": 20
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "COUNTRY_ID"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "DEPARTMENT",
+      "columns": [
+        {
+          "name": "DEPARTMENT_ID"
+        },
+        {
+          "name": "DEPARTMENT_NAME",
+          "maxLength": 100
+        },
+        {
+          "name": "START_DATE"
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "DEPARTMENTS",
+      "columns": [
+        {
+          "name": "DEPARTMENT_ID"
+        },
+        {
+          "name": "DEPARTMENT_NAME",
+          "maxLength": 30
+        },
+        {
+          "name": "MANAGER_ID"
+        },
+        {
+          "name": "LOCATION_ID"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "DEPARTMENT_ID"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "LOCATION_ID"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "EMPLOYEE",
+      "columns": [
+        {
+          "name": "EMPLOYEE_ID"
+        },
+        {
+          "name": "EMPLOYEE_NAME",
+          "dataset": "FullNames",
+          "deterministic": true,
+          "maxLength": 100
+        },
+        {
+          "name": "HIRE_DATE"
+        },
+        {
+          "name": "DEPARTMENT_ID"
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "EMPLOYEES",
+      "columns": [
+        {
+          "name": "EMPLOYEE_ID"
+        },
+        {
+          "name": "FIRST_NAME",
+          "dataset": "GivenNames",
+          "maxLength": 20
+        },
+        {
+          "name": "LAST_NAME",
+          "dataset": "FamilyNames",
+          "maxLength": 25
+        },
+        {
+          "name": "EMAIL",
+          "dataset": "EmailAddresses",
+          "maxLength": 25
+        },
+        {
+          "name": "PHONE_NUMBER",
+          "dataset": "PhoneNumbers",
+          "maxLength": 20
+        },
+        {
+          "name": "HIRE_DATE"
+        },
+        {
+          "name": "JOB_ID",
+          "maxLength": 10
+        },
+        {
+          "name": "SALARY"
+        },
+        {
+          "name": "COMMISSION_PCT"
+        },
+        {
+          "name": "MANAGER_ID"
+        },
+        {
+          "name": "DEPARTMENT_ID"
+        },
+        {
+          "name": "END_DATE"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "DEPARTMENT_ID"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "EMAIL"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "EMPLOYEE_ID"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "JOB_ID"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "MANAGER_ID"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "FIRST_NAME",
+            "LAST_NAME"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "EMPLOYEE_WORK_LOGS",
+      "columns": [
+        {
+          "name": "LOG_ID"
+        },
+        {
+          "name": "EMPLOYEE_ID"
+        },
+        {
+          "name": "ACTIVITY_TYPE",
+          "maxLength": 20
+        },
+        {
+          "name": "ACTIVITY_DATE"
+        },
+        {
+          "name": "HOURS_WORKED"
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "JOBS",
+      "columns": [
+        {
+          "name": "JOB_ID",
+          "maxLength": 10
+        },
+        {
+          "name": "JOB_TITLE",
+          "maxLength": 35
+        },
+        {
+          "name": "MIN_SALARY"
+        },
+        {
+          "name": "MAX_SALARY"
+        },
+        {
+          "name": "MEAN_SALARY"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "JOB_ID"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "JOB_HISTORY",
+      "columns": [
+        {
+          "name": "EMPLOYEE_ID"
+        },
+        {
+          "name": "START_DATE"
+        },
+        {
+          "name": "END_DATE"
+        },
+        {
+          "name": "JOB_ID",
+          "maxLength": 10
+        },
+        {
+          "name": "DEPARTMENT_ID"
+        },
+        {
+          "name": "EMPLOYEE_NAME",
+          "dataset": "FullNames",
+          "deterministic": true,
+          "maxLength": 20
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "DEPARTMENT_ID"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "EMPLOYEE_ID"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "EMPLOYEE_ID",
+            "START_DATE"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "JOB_ID"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "LOCATIONS",
+      "columns": [
+        {
+          "name": "LOCATION_ID"
+        },
+        {
+          "name": "STREET_ADDRESS",
+          "dataset": "StreetAddresses",
+          "deterministic": true,
+          "maxLength": 40
+        },
+        {
+          "name": "POSTAL_CODE",
+          "dataset": "PostCodes",
+          "maxLength": 12
+        },
+        {
+          "name": "CITY",
+          "dataset": "Cities",
+          "maxLength": 30
+        },
+        {
+          "name": "STATE_PROVINCE",
+          "maxLength": 25
+        },
+        {
+          "name": "COUNTRY_ID",
+          "maxLength": 2
+        },
+        {
+          "name": "TERRITORY_ID",
+          "maxLength": 20
+        },
+        {
+          "name": "LOCATION1",
+          "maxLength": 20
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "CITY"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "COUNTRY_ID"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "LOCATION_ID"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "STATE_PROVINCE"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "PROJECT",
+      "columns": [
+        {
+          "name": "PROJECT_ID"
+        },
+        {
+          "name": "PROJECT_NAME",
+          "maxLength": 100
+        },
+        {
+          "name": "START_DATE"
+        },
+        {
+          "name": "DEPARTMENT_ID"
+        },
+        {
+          "name": "PROJECT_TYPE",
+          "maxLength": 20
+        },
+        {
+          "name": "PROJECT_ORIGIN",
+          "maxLength": 20
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "PROJECT_PHASE",
+      "columns": [
+        {
+          "name": "PHASE_ID"
+        },
+        {
+          "name": "PHASE_NAME",
+          "maxLength": 100
+        },
+        {
+          "name": "PHASE_START_DATE"
+        },
+        {
+          "name": "PROJECT_ID"
+        },
+        {
+          "name": "DEPARTMENT_ID"
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "PROJECT_TEAM",
+      "columns": [
+        {
+          "name": "TEAM_ID"
+        },
+        {
+          "name": "TEAM_LEADER_NAME",
+          "maxLength": 100
+        },
+        {
+          "name": "DEPARTMENT_ID"
+        },
+        {
+          "name": "PROJECT_ID"
+        },
+        {
+          "name": "TEAM_START_DATE"
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "REGIONS",
+      "columns": [
+        {
+          "name": "REGION_ID"
+        },
+        {
+          "name": "REGION_NAME",
+          "maxLength": 25
+        },
+        {
+          "name": "REGION_TERRITORY",
+          "maxLength": 20
+        },
+        {
+          "name": "NEW_REGION",
+          "maxLength": 20
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "REGION_ID"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "SALES_HASH",
+      "columns": [
+        {
+          "name": "SALESMAN_ID"
+        },
+        {
+          "name": "SALESMAN_NAME",
+          "maxLength": 30
+        },
+        {
+          "name": "SALES_AMOUNT"
+        },
+        {
+          "name": "WEEK_NO"
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "SALES_LIST",
+      "columns": [
+        {
+          "name": "SALESMAN_ID"
+        },
+        {
+          "name": "SALESMAN_NAME",
+          "maxLength": 30
+        },
+        {
+          "name": "SALES_STATE",
+          "maxLength": 20
+        },
+        {
+          "name": "SALES_AMOUNT"
+        },
+        {
+          "name": "SALES_DATE"
+        },
+        {
+          "name": "SALESMAN_REGION",
+          "maxLength": 20
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "SALES_RANGE",
+      "columns": [
+        {
+          "name": "SALESMAN_ID"
+        },
+        {
+          "name": "SALESMAN_NAME",
+          "maxLength": 30
+        },
+        {
+          "name": "SALES_AMOUNT"
+        },
+        {
+          "name": "SALES_DATE"
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "TASK",
+      "columns": [
+        {
+          "name": "TASK_ID"
+        },
+        {
+          "name": "TASK_NAME",
+          "maxLength": 100
+        },
+        {
+          "name": "PROJECT_ID"
+        },
+        {
+          "name": "ASSIGNED_DATE"
+        },
+        {
+          "name": "FAVORITE_TASK",
+          "maxLength": 20
+        }
+      ]
+    },
+    {
+      "schema": "HR",
+      "name": "flyway_schema_history",
+      "columns": [
+        {
+          "name": "installed_rank"
+        },
+        {
+          "name": "version",
+          "maxLength": 50
+        },
+        {
+          "name": "description",
+          "maxLength": 200
+        },
+        {
+          "name": "type",
+          "maxLength": 20
+        },
+        {
+          "name": "script",
+          "maxLength": 1000
+        },
+        {
+          "name": "checksum"
+        },
+        {
+          "name": "installed_by",
+          "maxLength": 100
+        },
+        {
+          "name": "installed_on"
+        },
+        {
+          "name": "execution_time"
+        },
+        {
+          "name": "success"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "success"
+          ]
+        }
+      ]
+    }
+  ]
+}

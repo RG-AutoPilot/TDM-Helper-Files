@@ -14,8 +14,9 @@
 # Example values
 $DB_ENGINE = "SqlServer"
 $SOURCE_CONN_STRING = "Server=Localhost;Database=NewWorldDB;Trusted_Connection=true;Trust Server Certificate=true;"
-$OPTIONS_FILE = "subset-options.json"
-$OUTPUT_FILE = "subset_log.json"
+$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\subset-options.json"
+$OUTPUT_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\subset_log.json"
+$OUTPUT = "Human" # Human|Json
 $LOG_LEVEL = "Debug"
 
 Write-Host "Running subset for database engine: $DB_ENGINE"
@@ -25,4 +26,5 @@ rgsubset explain `
   --source-connection-string "$SOURCE_CONN_STRING" `
   --options-file "$OPTIONS_FILE" `
   --log-level $LOG_LEVEL `
-  --output-file $OUTPUT_FILE
+  --output-file $OUTPUT_FILE `
+  --output $OUTPUT

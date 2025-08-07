@@ -1,0 +1,490 @@
+{
+  "jsonSchemaVersion": 1,
+  "tables": [
+    {
+      "schema": "public",
+      "name": "actor",
+      "columns": [
+        {
+          "name": "actor_id"
+        },
+        {
+          "name": "first_name",
+          "dataset": "GivenNames",
+          "deterministic": true
+        },
+        {
+          "name": "last_name",
+          "dataset": "FamilyNames"
+        },
+        {
+          "name": "last_update"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "last_name"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "address",
+      "columns": [
+        {
+          "name": "address_id"
+        },
+        {
+          "name": "address",
+          "dataset": "StreetAddresses",
+          "deterministic": true
+        },
+        {
+          "name": "address2",
+          "dataset": "StreetAddresses",
+          "deterministic": true
+        },
+        {
+          "name": "district"
+        },
+        {
+          "name": "city_id"
+        },
+        {
+          "name": "postal_code",
+          "dataset": "PostCodes"
+        },
+        {
+          "name": "phone",
+          "dataset": "PhoneNumbers"
+        },
+        {
+          "name": "last_update"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "city_id"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "category",
+      "columns": [
+        {
+          "name": "category_id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "last_update"
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "city",
+      "columns": [
+        {
+          "name": "city_id"
+        },
+        {
+          "name": "city",
+          "dataset": "Cities",
+          "deterministic": true
+        },
+        {
+          "name": "country_id"
+        },
+        {
+          "name": "last_update"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "country_id"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "country",
+      "columns": [
+        {
+          "name": "country_id"
+        },
+        {
+          "name": "country",
+          "dataset": "Countries",
+          "deterministic": true
+        },
+        {
+          "name": "last_update"
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "customer",
+      "columns": [
+        {
+          "name": "customer_id"
+        },
+        {
+          "name": "store_id"
+        },
+        {
+          "name": "first_name",
+          "dataset": "GivenNames",
+          "deterministic": true
+        },
+        {
+          "name": "last_name",
+          "dataset": "FamilyNames"
+        },
+        {
+          "name": "email",
+          "dataset": "EmailAddresses"
+        },
+        {
+          "name": "address_id"
+        },
+        {
+          "name": "activebool"
+        },
+        {
+          "name": "create_date"
+        },
+        {
+          "name": "last_update"
+        },
+        {
+          "name": "active"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "address_id"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "store_id"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "last_name"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "film",
+      "columns": [
+        {
+          "name": "film_id"
+        },
+        {
+          "name": "title"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "release_year"
+        },
+        {
+          "name": "language_id"
+        },
+        {
+          "name": "original_language_id"
+        },
+        {
+          "name": "rental_duration"
+        },
+        {
+          "name": "rental_rate"
+        },
+        {
+          "name": "length"
+        },
+        {
+          "name": "replacement_cost"
+        },
+        {
+          "name": "rating"
+        },
+        {
+          "name": "last_update"
+        },
+        {
+          "name": "special_features"
+        },
+        {
+          "name": "fulltext"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "fulltext"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "language_id"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "original_language_id"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "title"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "film_actor",
+      "columns": [
+        {
+          "name": "actor_id"
+        },
+        {
+          "name": "film_id"
+        },
+        {
+          "name": "last_update"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "film_id"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "film_category",
+      "columns": [
+        {
+          "name": "film_id"
+        },
+        {
+          "name": "category_id"
+        },
+        {
+          "name": "last_update"
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "inventory",
+      "columns": [
+        {
+          "name": "inventory_id"
+        },
+        {
+          "name": "film_id"
+        },
+        {
+          "name": "store_id"
+        },
+        {
+          "name": "last_update"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "film_id",
+            "store_id"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "language",
+      "columns": [
+        {
+          "name": "language_id"
+        },
+        {
+          "name": "name",
+          "maxLength": 20
+        },
+        {
+          "name": "last_update"
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "payment",
+      "columns": [
+        {
+          "name": "payment_id"
+        },
+        {
+          "name": "customer_id"
+        },
+        {
+          "name": "staff_id"
+        },
+        {
+          "name": "rental_id"
+        },
+        {
+          "name": "amount"
+        },
+        {
+          "name": "payment_date"
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "rental",
+      "columns": [
+        {
+          "name": "rental_id"
+        },
+        {
+          "name": "rental_date"
+        },
+        {
+          "name": "inventory_id"
+        },
+        {
+          "name": "customer_id"
+        },
+        {
+          "name": "return_date"
+        },
+        {
+          "name": "staff_id"
+        },
+        {
+          "name": "last_update"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "inventory_id"
+          ]
+        },
+        {
+          "type": "Unique",
+          "columns": [
+            "rental_date",
+            "inventory_id",
+            "customer_id"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "staff",
+      "columns": [
+        {
+          "name": "staff_id"
+        },
+        {
+          "name": "first_name",
+          "dataset": "GivenNames",
+          "deterministic": true
+        },
+        {
+          "name": "last_name",
+          "dataset": "FamilyNames",
+          "deterministic": true
+        },
+        {
+          "name": "address_id"
+        },
+        {
+          "name": "email",
+          "dataset": "EmailAddresses"
+        },
+        {
+          "name": "store_id"
+        },
+        {
+          "name": "active"
+        },
+        {
+          "name": "username"
+        },
+        {
+          "name": "password"
+        },
+        {
+          "name": "last_update"
+        },
+        {
+          "name": "picture"
+        }
+      ]
+    },
+    {
+      "schema": "public",
+      "name": "store",
+      "columns": [
+        {
+          "name": "store_id"
+        },
+        {
+          "name": "manager_staff_id"
+        },
+        {
+          "name": "address_id"
+        },
+        {
+          "name": "last_update"
+        }
+      ],
+      "constraints": [
+        {
+          "type": "Unique",
+          "columns": [
+            "manager_staff_id"
+          ]
+        }
+      ]
+    }
+  ]
+}

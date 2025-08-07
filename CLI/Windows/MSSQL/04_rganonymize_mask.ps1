@@ -11,11 +11,12 @@
 # Example values
 $DB_ENGINE = "SqlServer"
 $CONNECTION_STRING = "Server=Localhost;Database=NewWorldDB_Treated;Trusted_Connection=true;Trust Server Certificate=true;"
-$MASKING_FILE = "masking.json"
-$OPTIONS_FILE = "masking-options.json"
+$MASKING_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\masking.json"
+$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\masking-options.json"
 # https://documentation.red-gate.com/testdatamanager/command-line-interface-cli/anonymization/masking/enabling-deterministic-masking
 $DETERMINISTIC_SEED="my-secret-seed" # Can be any string, but must be at least 4 characters long
 $LOG_LEVEL = "Verbose"
+$OUTPUT = "Human" # Human|Json
 
 Write-Host "Running masking for database engine: $DB_ENGINE"
 
@@ -25,4 +26,5 @@ rganonymize mask `
   --masking-file $MASKING_FILE `
   --options-file "$OPTIONS_FILE" `
   --deterministic-seed "$DETERMINISTIC_SEED" `
-  --log-level $LOG_LEVEL
+  --log-level $LOG_LEVEL `
+  --output $OUTPUT
