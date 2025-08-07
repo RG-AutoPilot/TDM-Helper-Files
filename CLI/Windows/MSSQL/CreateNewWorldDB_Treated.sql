@@ -11,5 +11,5 @@ DBCC CLONEDATABASE('NewWorldDB', 'NewWorldDB_Treated');
 GO
 
 -- Ensure the cloned database is not read-only
-ALTER DATABASE NewWorldDB_Treated SET READ_WRITE;
+ALTER DATABASE NewWorldDB_Treated SET READ_WRITE with rollback IMMEDIATE;
 GO
