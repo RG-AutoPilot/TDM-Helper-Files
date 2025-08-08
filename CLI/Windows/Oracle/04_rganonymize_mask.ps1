@@ -11,8 +11,8 @@
 # Example values
 $DB_ENGINE = "Oracle"
 $CONNECTION_STRING = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=dev1)));User Id=hr;Password=hr;"
-$MASKING_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\Oracle\masking.json"
-$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\Oracle\masking-options.json"
+$MASKING_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\Oracle\masking.json"
+$OPTIONS_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\Oracle\masking-options.json"
 $OUTPUT = "Human" # Human|Json
 # https://documentation.red-gate.com/testdatamanager/command-line-interface-cli/anonymization/masking/enabling-deterministic-masking
 $DETERMINISTIC_SEED="my-secret-seed" # Can be any string, but must be at least 4 characters long

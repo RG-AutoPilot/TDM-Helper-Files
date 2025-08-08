@@ -14,8 +14,8 @@
 # Example values
 $DB_ENGINE = "MySql"
 $SOURCE_CONN_STRING = "Server=localhost;Port=3306;Database=sakila;Uid=root;Pwd=Redg@te1"
-$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MySQL\subset-options.json"
-$OUTPUT_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MySQL\subset_log.json"
+$OPTIONS_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\MySQL\subset-options.json"
+$OUTPUT_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\MySQL\subset_log.json"
 $OUTPUT = "Human" # Human|Json
 $LOG_LEVEL = "Debug"
 

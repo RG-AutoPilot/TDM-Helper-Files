@@ -6,24 +6,26 @@
   "excludedTables": [
     {
       "schema": "",
+      "description": "rgsubset fails due to a cyclical reference",
       "name": "store"
     },
     {
       "schema": "",
+      "description": "rgsubset fails due to a cyclical reference",
       "name": "staff"
     },
     {
       "schema": "",
-      "name": "address",
-      "columns": [
-        {
-          "name": "location",
-          "exclude": true
-        }
-      ]
+      "description": "rgsubset fails due to lack of default value for column 'name'",
+      "name": "category"
+    },
+    {
+      "schema": "",
+      "description": "rgsubset fails due to lack of default value for column 'name'",
+      "name": "language"
     }
   ],
-  "//staticDataTables": [
+  "\\staticDataTables": [
     {
       "schema": "",
       "name": "countries"

@@ -14,8 +14,8 @@
 # Example values
 $DB_ENGINE = "SqlServer"
 $SOURCE_CONN_STRING = "Server=Localhost;Database=NewWorldDB;Trusted_Connection=true;Trust Server Certificate=true;"
-$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\subset-options.json"
-$OUTPUT_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\subset_log.json"
+$OPTIONS_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\MSSQL\subset-options.json"
+$OUTPUT_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\MSSQL\subset_log.json"
 $OUTPUT = "Human" # Human|Json
 $LOG_LEVEL = "Debug"
 

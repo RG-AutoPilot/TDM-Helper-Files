@@ -11,7 +11,7 @@
 # Example values
 $DB_ENGINE = "PostgreSQL"
 $CONNECTION_STRING = "Host=Localhost;Port=5432;Database=pagila_treated;User Id=postgres;Password=Redg@te1;"
-$CLASSIFICATION_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\PostgreSQL\classification.json"
+$CLASSIFICATION_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\PostgreSQL\classification.json"
 $OUTPUT = "Human" # Human|Json
 $LOG_LEVEL = "Verbose"
 

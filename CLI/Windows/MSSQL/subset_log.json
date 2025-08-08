@@ -1,73 +1,85 @@
-Starting tables:
-
-Model 1:
-  dbo.Orders
-    ABS(BINARY_CHECKSUM([OrderID],[CustomerID],[EmployeeID],[OrderDate],[RequiredDate],[ShippedDate],[ShipVia],[Freight],[ShipName],[ShipAddress],[ShipCity],[ShipRegion],[ShipPostalCode],[ShipCountry],[ShipCountryCode],[ShipState],[OrderAddress],[ShipId],[TestOrder]) * 87178291199) % 2147483647 < 184549375.9140625
-  dbo.CustomerCustomerDemo
-    ABS(BINARY_CHECKSUM([CustomerID],[CustomerTypeID]) * 87178291199) % 2147483647 < 184549375.9140625
-  dbo.Products
-    ABS(BINARY_CHECKSUM([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit],[UnitPrice],[UnitsInStock],[UnitsOnOrder],[ReorderLevel],[Discontinued],[UnitId],[UnitVolume],[UnitName]) * 87178291199) % 2147483647 < 184549375.9140625
-  dbo.EmployeeTerritories
-    ABS(BINARY_CHECKSUM([EmployeeID],[TerritoryID],[foo]) * 87178291199) % 2147483647 < 184549375.9140625
-
---------------------------------------------------
-
-Static data tables:
-
-dbo.Categories
-dbo.CustomerDemographics
-dbo.Shippers
-dbo.Suppliers
-dbo.Region
-
---------------------------------------------------
-
-Directional graph:
-
-Model 1:
-  Step 1
-    dbo.Orders
-    ABS(BINARY_CHECKSUM([OrderID],[CustomerID],[EmployeeID],[OrderDate],[RequiredDate],[ShippedDate],[ShipVia],[Freight],[ShipName],[ShipAddress],[ShipCity],[ShipRegion],[ShipPostalCode],[ShipCountry],[ShipCountryCode],[ShipState],[OrderAddress],[ShipId],[TestOrder]) * 87178291199) % 2147483647 < 184549375.9140625
-  Step 2
-    dbo.CustomerCustomerDemo
-    ABS(BINARY_CHECKSUM([CustomerID],[CustomerTypeID]) * 87178291199) % 2147483647 < 184549375.9140625
-  Step 3
-    dbo.Products
-    ABS(BINARY_CHECKSUM([ProductID],[ProductName],[SupplierID],[CategoryID],[QuantityPerUnit],[UnitPrice],[UnitsInStock],[UnitsOnOrder],[ReorderLevel],[Discontinued],[UnitId],[UnitVolume],[UnitName]) * 87178291199) % 2147483647 < 184549375.9140625
-  Step 4
-    dbo.EmployeeTerritories
-    ABS(BINARY_CHECKSUM([EmployeeID],[TerritoryID],[foo]) * 87178291199) % 2147483647 < 184549375.9140625
-  Step 5:
-    dbo.Order Details (OrderID) -> dbo.Orders (OrderID)
-  Step 6:
-    dbo.Order Details (ProductID) -> dbo.Products (ProductID)
-  Step 7:
-    dbo.Territories (TerritoryID) <- dbo.EmployeeTerritories (TerritoryID)
-  Step 8:
-    dbo.Customers (CustomerID) <- dbo.CustomerCustomerDemo (CustomerID)
-  Step 9:
-    dbo.Customers (CustomerID) <- dbo.Orders (CustomerID)
-  Step 10:
-    dbo.Employees (EmployeeID) <- dbo.EmployeeTerritories (EmployeeID)
-  Step 11:
-    dbo.Employees (EmployeeID) <- dbo.Orders (EmployeeID)
-  Step 12:
-    dbo.Employees (EmployeeID) <- dbo.Employees (ReportsTo)
-
---------------------------------------------------
-
-Traversal tree:
-
-[ start ]
-├─ dbo.Orders
-│  ├─ dbo.Order Details
-│  ├─ dbo.Customers
-│  └─ dbo.Employees
-├─ dbo.CustomerCustomerDemo
-│  └─ dbo.Customers
-├─ dbo.Products
-│  └─ dbo.Order Details
-└─ dbo.EmployeeTerritories
-   ├─ dbo.Territories
-   └─ dbo.Employees
-
+{
+  "jsonSchemaVersion": 1,
+  "sourceDatabaseSizeInBytes": 1581056,
+  "targetDatabaseSizeInBytes": 0,
+  "tables": [
+    {
+      "schema": "dbo",
+      "name": "Categories",
+      "sourceRows": 8,
+      "targetRows": 8
+    },
+    {
+      "schema": "dbo",
+      "name": "CustomerCustomerDemo",
+      "sourceRows": 0,
+      "targetRows": 0
+    },
+    {
+      "schema": "dbo",
+      "name": "CustomerDemographics",
+      "sourceRows": 0,
+      "targetRows": 0
+    },
+    {
+      "schema": "dbo",
+      "name": "Customers",
+      "sourceRows": 91,
+      "targetRows": 31
+    },
+    {
+      "schema": "dbo",
+      "name": "Employees",
+      "sourceRows": 9,
+      "targetRows": 9
+    },
+    {
+      "schema": "dbo",
+      "name": "EmployeeTerritories",
+      "sourceRows": 49,
+      "targetRows": 2
+    },
+    {
+      "schema": "dbo",
+      "name": "Order Details",
+      "sourceRows": 2155,
+      "targetRows": 0
+    },
+    {
+      "schema": "dbo",
+      "name": "Orders",
+      "sourceRows": 830,
+      "targetRows": 44
+    },
+    {
+      "schema": "dbo",
+      "name": "Products",
+      "sourceRows": 77,
+      "targetRows": 0
+    },
+    {
+      "schema": "dbo",
+      "name": "Region",
+      "sourceRows": 4,
+      "targetRows": 4
+    },
+    {
+      "schema": "dbo",
+      "name": "Shippers",
+      "sourceRows": 3,
+      "targetRows": 3
+    },
+    {
+      "schema": "dbo",
+      "name": "Suppliers",
+      "sourceRows": 29,
+      "targetRows": 29
+    },
+    {
+      "schema": "dbo",
+      "name": "Territories",
+      "sourceRows": 53,
+      "targetRows": 2
+    }
+  ]
+}

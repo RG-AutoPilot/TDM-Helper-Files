@@ -13,10 +13,10 @@
 
 # Example values
 $DB_ENGINE = "PostgreSQL"
-$SOURCE_CONN_STRING = "Host=Localhost;Port=5432;Database=pagila_fullrestore;User Id=postgres;Password=Redg@te1;" 
+$SOURCE_CONN_STRING = "Host=Localhost;Port=5432;Database=pagila_dev;User Id=postgres;Password=Redg@te1;" 
 $TARGET_CONN_STRING="Host=Localhost;Port=5432;Database=pagila_treated;User Id=postgres;Password=Redg@te1;"
-$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\PostgreSQL\subset-options.json"
-$OUTPUT_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\PostgreSQL\subset_log.json"
+$OPTIONS_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\PostgreSQL\subset-options.json"
+$OUTPUT_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\PostgreSQL\subset_log.json"
 $OUTPUT = "Human" # Human|Json
 # Perform a dry-run with no subsetting applied by turning to true
 $DRY_RUN="false"

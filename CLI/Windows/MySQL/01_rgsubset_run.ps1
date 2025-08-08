@@ -15,12 +15,13 @@
 $DB_ENGINE = "MySql"
 $SOURCE_CONN_STRING = "Server=localhost;Port=3306;Database=sakila;Uid=root;Pwd=Redg@te1"
 $TARGET_CONN_STRING="Server=localhost;Port=3306;Database=sakila_treated;Uid=root;Pwd=Redg@te1"
-$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MySQL\subset-options.json"
-$OUTPUT_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MySQL\subset_log.json"
+$OPTIONS_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\MySQL\subset-options.json"
+$OUTPUT_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\MySQL\subset_log.json"
 $OUTPUT = "Human" # Human|Json
 # Perform a dry-run with no subsetting applied by turning to true
 $DRY_RUN="false"
 $LOG_LEVEL = "debug"
+$FORCE = "false"
 
 Write-Host "Running subset for database engine: $DB_ENGINE"
 
@@ -33,4 +34,5 @@ rgsubset run `
   --dry-run $DRY_RUN `
   --log-level $LOG_LEVEL `
   --output-file $OUTPUT_FILE  `
-  --output $OUTPUT
+  --output $OUTPUT `
+  --force $FORCE

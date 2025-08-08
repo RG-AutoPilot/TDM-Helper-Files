@@ -11,8 +11,8 @@
 # Example values
 $DB_ENGINE = "PostgreSQL"
 $CONNECTION_STRING = "Host=Localhost;Port=5432;Database=pagila_treated;User Id=postgres;Password=Redg@te1;"
-$MASKING_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\PostgreSQL\masking.json"
-$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\PostgreSQL\masking-options.json"
+$MASKING_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\PostgreSQL\masking.json"
+$OPTIONS_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\PostgreSQL\masking-options.json"
 $OUTPUT = "Human" # Human|Json
 # https://documentation.red-gate.com/testdatamanager/command-line-interface-cli/anonymization/masking/enabling-deterministic-masking
 $DETERMINISTIC_SEED="my-secret-seed" # Can be any string, but must be at least 4 characters long

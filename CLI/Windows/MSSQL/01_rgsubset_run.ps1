@@ -15,13 +15,13 @@
 $DB_ENGINE = "SqlServer"
 $SOURCE_CONN_STRING="Server=Localhost;Database=NewWorldDB;Trusted_Connection=true;Trust Server Certificate=true;"
 $TARGET_CONN_STRING="Server=Localhost;Database=NewWorldDB_Treated;Trusted_Connection=true;Trust Server Certificate=true;"
-$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\subset-options.json"
-$OUTPUT_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MSSQL\subset_log.json"
+$OPTIONS_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\MSSQL\subset-options.json"
+$OUTPUT_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\MSSQL\subset_log.json"
 $OUTPUT = "Human" # Human|Json
 # Perform a dry-run with no subsetting applied by turning to true
 $DRY_RUN="false"
 $LOG_LEVEL = "Verbose"
-$FORCE = "true" # Force subsetting to run even if the source and target database have schema differences
+$FORCE = "false" # Force subsetting to run even if the source and target database have schema differences
 
 Write-Host "Running subset for database engine: $DB_ENGINE"
 

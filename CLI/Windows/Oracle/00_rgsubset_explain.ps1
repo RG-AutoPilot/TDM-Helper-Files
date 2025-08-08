@@ -14,7 +14,7 @@
 # Example values
 $DB_ENGINE = "Oracle"
 $SOURCE_CONN_STRING = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=PDBPROD)));User Id=hr;Password=hr;" 
-$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\Oracle\subset-options.json"
+$OPTIONS_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\Oracle\subset-options.json"
 $OUTPUT_FILE = "subset_log.json"
 $OUTPUT = "Human" # Human|Json
 $LOG_LEVEL = "Debug"

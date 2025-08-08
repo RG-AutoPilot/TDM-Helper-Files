@@ -7,8 +7,8 @@
 #   --masking-file: Path to the JSON file where masking rules will be generated.
 
 # Example values
-$CLASSIFICATION_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\PostgreSQL\classification.json"
-$MASKING_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\PostgreSQL\masking.json"
+$CLASSIFICATION_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\PostgreSQL\classification.json"
+$MASKING_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\PostgreSQL\masking.json"
 $OUTPUT = "Human" # Human|Json
 
 Write-Host "Running mapping from classification file to masking file"

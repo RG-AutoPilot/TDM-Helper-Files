@@ -11,7 +11,7 @@
 # Example values
 $DB_ENGINE = "MySql"
 $CONNECTION_STRING = "Server=localhost;Port=3306;Database=sakila_treated;Uid=root;Pwd=Redg@te1"
-$CLASSIFICATION_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\MySQL\classification.json"
+$CLASSIFICATION_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\MySQL\classification.json"
 $LOG_LEVEL = "Verbose"
 $OUTPUT = "Human" # Human|Json
 

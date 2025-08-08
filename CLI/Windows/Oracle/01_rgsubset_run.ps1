@@ -15,8 +15,8 @@
 $DB_ENGINE = "Oracle"
 $SOURCE_CONN_STRING = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=PDBPROD)));User Id=hr;Password=hr;" 
 $TARGET_CONN_STRING="Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=Dev1)));User Id=hr;Password=hr;"
-$OPTIONS_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\Oracle\subset-options.json"
-$OUTPUT_FILE = "C:\Users\redgate\Desktop\TDM\TDM-Helper-Files\CLI\Windows\Oracle\subset_log.json"
+$OPTIONS_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\Oracle\subset-options.json"
+$OUTPUT_FILE = "C:\git\Demos\TDM-Helper-Files\CLI\Windows\Oracle\subset_log.json"
 $OUTPUT = "Json" # Human|Json
 # Perform a dry-run with no subsetting applied by turning to true
 $DRY_RUN="false"

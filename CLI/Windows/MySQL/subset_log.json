@@ -1,49 +1,37 @@
 {
   "jsonSchemaVersion": 1,
-  "sourceDatabaseSizeInBytes": 983040,
-  "targetDatabaseSizeInBytes": 278528,
+  "sourceDatabaseSizeInBytes": 425984,
+  "targetDatabaseSizeInBytes": 147456,
   "tables": [
     {
       "schema": "",
       "name": "actor",
       "sourceRows": 200,
-      "targetRows": 72
+      "targetRows": 52
+    },
+    {
+      "schema": "",
+      "name": "address",
+      "sourceRows": 603,
+      "targetRows": 139
     },
     {
       "schema": "",
       "name": "city",
       "sourceRows": 600,
-      "targetRows": 196
+      "targetRows": 139
     },
     {
       "schema": "",
       "name": "country",
       "sourceRows": 109,
-      "targetRows": 64
-    },
-    {
-      "schema": "",
-      "name": "film",
-      "sourceRows": 1000,
-      "targetRows": 297
-    },
-    {
-      "schema": "",
-      "name": "film_actor",
-      "sourceRows": 5462,
-      "targetRows": 587
-    },
-    {
-      "schema": "",
-      "name": "film_category",
-      "sourceRows": 1000,
-      "targetRows": 297
+      "targetRows": 57
     },
     {
       "schema": "",
       "name": "film_text",
       "sourceRows": 1000,
-      "targetRows": 325
+      "targetRows": 258
     }
   ]
 }

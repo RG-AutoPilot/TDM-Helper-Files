@@ -3,9 +3,9 @@
   "howTo": "Example logic can be found below to show syntax. Simply remove // at the beginnging of the attribute name. For example '//excludedTables' becomes 'excludedTables'",
   "desiredSize": "25%",
   "includeTablesRowThreshold": 30,
-  "excludedTables": [
+  "\\excludedTables": [
     {
-      "schema": "public",
+      "schema": "pagila",
       "name": "payment"
     }    
   ],
